@@ -1,0 +1,4 @@
+energy at t=0: ref 149.222835420097994 fast 149.222835420098136
+max |dU| = 1.54e-14, max |dE| = 2.28e-15
+energy after 100 steps: ref 149.21399764478537 fast 149.21399764478480
+time ref 2.97s fast 0.31s

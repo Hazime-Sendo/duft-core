@@ -1,0 +1,14 @@
+     gamma    max rel err (adiabatic)   max rel err (naive dA/dt=-A)
+        10                  9.244e-03                      7.027e-01
+        30                  1.007e-03                      8.560e-01
+       100                  9.039e-05                      9.446e-01
+       300                  1.004e-05                      9.512e-01
+      1000                  9.037e-07                      9.512e-01
+      3000                  1.004e-07                      9.512e-01
+     10000                  8.984e-09                      9.512e-01
+    100000                  1.245e-07                      9.512e-01
+
+Expected: err_adiabatic -> 0 as gamma increases (eventually
+below 1e-8, i.e. 8 significant figures), while err_naive
+stays of order 1 regardless of gamma (confirming the naive
+guess dA/dt ~= -A is not the correct large-gamma limit).

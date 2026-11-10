@@ -1,0 +1,25 @@
+Check 1: lhs(A) returns exactly A for arbitrary A
+  A=    0.000000   lhs(A)=    0.000000   exactly equal to A: True
+  A=    1.000000   lhs(A)=    1.000000   exactly equal to A: True
+  A=   -1.000000   lhs(A)=   -1.000000   exactly equal to A: True
+  A=    3.141590   lhs(A)=    3.141590   exactly equal to A: True
+  A=    0.628651   lhs(A)=    0.628651   exactly equal to A: True
+  A=   -0.660524   lhs(A)=   -0.660524   exactly equal to A: True
+  A=    3.202113   lhs(A)=    3.202113   exactly equal to A: True
+  A=    0.524501   lhs(A)=    0.524501   exactly equal to A: True
+  A=   -2.678347   lhs(A)=   -2.678347   exactly equal to A: True
+  A=    1.807975   lhs(A)=    1.807975   exactly equal to A: True
+  A=    6.520000   lhs(A)=    6.520000   exactly equal to A: True
+  A=    4.735405   lhs(A)=    4.735405   exactly equal to A: True
+  A=   -3.518676   lhs(A)=   -3.518676   exactly equal to A: True
+  A=   -6.327107   lhs(A)=   -6.327107   exactly equal to A: True
+  -> all exact: True
+
+Check 2: is_static(A) is True iff A == 0
+  A=           0   is_static=True
+  A=       1e-13   is_static=True
+  A=       1e-10   is_static=False
+  A=       0.001   is_static=False
+  A=           1   is_static=False
+  A=        -2.5   is_static=False
+  -> only (numerically) zero values are reported static: True
