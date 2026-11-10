@@ -10,7 +10,7 @@ Raw console output: `results/*.log`; environment: `results/environment.txt`.
 | Paper section | Script | Result in this run | Matches paper claim? |
 |---|---|---|---|
 | §3 convergence | `verify_energy_convergence.py` | Halving dt: leapfrog ratio 3.99 / 4.00 / 4.00; Yoshida-4 ratio 15.87 / 15.97 / 16.00 (asymptotic). First pair (dt 0.05 to 0.02) is not a halving and is pre-asymptotic: 5.82 / 36.20 | Yes |
-| §6 Gauss's law | `verify_gauss_law.py` | max drift 1.3e-15 (12x12), 5.3e-15 (32x32), 1.4e-14 (64x64) for dt = 0.02, 0.01, 0.005 (6x6 not re-run in this table; ≤1.1e-15 in an earlier run) | Yes (round-off level) |
+| §6 Gauss's law | `verify_gauss_law.py` | norm drift ≤3.6e-15 and component-wise (every matrix element, every site) drift ≤5.8e-15 for 6x6, 12x12, 32x32, 64x64 and dt = 0.02, 0.01, 0.005 (T=2) | Yes (round-off level) |
 | §5 perturbation growth | `lyapunov_paper_scale.py` (32x32, T=10, seed 42; run separately for amp 0.05/0.1/0.2/0.3) | Plaquette (gauge-invariant) exponent, fit from t0=3: 0.001 / 0.022 / 0.175 / 0.278; high-k link: 0.002 / 0.018 / 0.141 / 0.300; low-k link: 0.159 / 0.231 / 0.281 / 0.264 (strongly window dependent). Energy drift max 0.0094-0.0117 % (at t=T: 0.0039-0.0063 %) | Partly. Link-based "two-stage" reading not adopted; gauge-invariant low-k-first tendency at amp 0.1-0.2 in 4/4 seeds (weak, see VERIFICATION_LOG item 8; `analyze_lyapunov_windows.py --summary`) |
 | §5 smoke test | `lyapunov_phase_diagram.py` (16x16, T=5; in run_all.sh) | amp 0.05: lambda_high 0.017; amp 0.30: 0.235 | Qualitative only |
 | §3/App. A FRW | `frw_klein_gordon_derivation.py` | KG_eq + DUFT_update = 0 (sympy) | Yes (2H friction) |

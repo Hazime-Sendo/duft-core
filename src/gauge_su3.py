@@ -153,20 +153,29 @@ def compute_energy(Ex, Ey, Ux, Uy):
     return H_E + H_B
 
 
+def covariant_gauss_field(Ex, Ey, Ux, Uy):
+    """Site-resolved covariant Gauss's-law field G(x) (3x3 matrix at each site),
+        G(x) = sum_i [ E_i(x) - U_i(x-i)^dag E_i(x-i) U_i(x-i) ],
+    returned as an array of shape (Nx, Ny, 3, 3)."""
+    Nx, Ny = Ux.shape[0], Ux.shape[1]
+    G = np.zeros((Nx, Ny, 3, 3), dtype=complex)
+    for i in range(Nx):
+        for j in range(Ny):
+            im, jm = (i - 1) % Nx, (j - 1) % Ny
+            tx = Ex[i, j] - Ux[im, j].conj().T @ Ex[im, j] @ Ux[im, j]
+            ty = Ey[i, j] - Uy[i, jm].conj().T @ Ey[i, jm] @ Uy[i, jm]
+            G[i, j] = tx + ty
+    return G
+
+
 def covariant_gauss_residual(Ex, Ey, Ux, Uy):
     """||G|| for the standard Kogut-Susskind Gauss's law,
         G(x) = sum_i [ E_i(x) - U_i(x-i)^dag E_i(x-i) U_i(x-i) ].
 
     This is the formula confirmed, by direct comparison against an
     alternative (incorrect) candidate, to be exactly conserved under
-    the dynamics above -- see docs/VERIFICATION_LOG.md."""
-    Nx, Ny = Ux.shape[0], Ux.shape[1]
-    s = 0.0
-    for i in range(Nx):
-        for j in range(Ny):
-            im, jm = (i - 1) % Nx, (j - 1) % Ny
-            tx = Ex[i, j] - Ux[im, j].conj().T @ Ex[im, j] @ Ux[im, j]
-            ty = Ey[i, j] - Uy[i, jm].conj().T @ Ey[i, jm] @ Uy[i, jm]
-            G = tx + ty
-            s += np.sum(np.abs(G) ** 2)
-    return np.sqrt(s)
+    the dynamics above -- see docs/VERIFICATION_LOG.md.
+    ||G|| is the Frobenius norm of the full lattice field G(x); the
+    site-resolved field is available from covariant_gauss_field."""
+    G = covariant_gauss_field(Ex, Ey, Ux, Uy)
+    return np.sqrt(np.sum(np.abs(G) ** 2))

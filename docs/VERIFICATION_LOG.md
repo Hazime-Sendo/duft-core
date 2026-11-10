@@ -500,3 +500,16 @@ are separated only by the single extra amplitude 0.5 (3 spectra); no scan of the
 shell-low/high and amp 0.05/0.3 not repeated in the new backgrounds; amp 0.1 smooth is far from converged, so
 "no convergence" means within T=40 (a much longer run could still converge). (iv) lowstrong boosts only |k|<4 by x3;
 other profiles untested. (v) Rpm uses fixed integer-|k| bands. Manuscript unchanged.
+
+## Note added in v1.0.1: Gauss's-law check is now component-wise
+
+`verify_gauss_law.py` previously reported only the norm deviation
+| ||G(t)|| - ||G(0)|| |. Conservation of the norm does not imply
+conservation of each component. The script now also reports the maximum
+component-wise deviation max |G_ab(x,t) - G_ab(x,0)| over all sites and matrix
+elements (new function `covariant_gauss_field` in `src/gauge_su3.py`;
+`covariant_gauss_residual` is unchanged in definition). Result: component
+deviations <= 5.8e-15 for all lattices (6x6 to 64x64) and time steps tested, i.e. round-off
+level. The round-off-level values of the norm deviation depend on summation
+order (the refactoring changed the order), and are only meaningful as orders
+of magnitude. No analytic proof of exact conservation is claimed.

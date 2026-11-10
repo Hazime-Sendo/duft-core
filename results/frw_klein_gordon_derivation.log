@@ -27,5 +27,5 @@ Homogeneous-mode reduction:
                        2                          
                       a (t)                       
 
-KG_eq + DUFT_update (should be 0, confirming equivalence up to the metric-signature sign):
+KG_eq + DUFT_update (should be 0, i.e. KG_eq = -DUFT_update: the two equations differ by the factor -1):
 0

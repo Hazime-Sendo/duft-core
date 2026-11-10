@@ -59,8 +59,8 @@ def main():
     DUFT_update = sp.simplify(
         sp.diff(Psi_hom, t, 2) + 2 * H * sp.diff(Psi_hom, t) + Vprime)
 
-    print("\nKG_eq + DUFT_update (should be 0, confirming equivalence "
-          "up to the metric-signature sign):")
+    print("\nKG_eq + DUFT_update (should be 0, i.e. KG_eq = -DUFT_update: "
+          "the two equations differ by the factor -1):")
     sp.pprint(sp.simplify(KG_eq + DUFT_update))
 
 

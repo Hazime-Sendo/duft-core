@@ -1,12 +1,24 @@
+=== 6x6 lattice ===
+  dt=0.0200  G0=1.671765  max|norm drift|=4.441e-16  max|component drift|=1.429e-15
+  dt=0.0100  G0=1.671765  max|norm drift|=6.661e-16  max|component drift|=1.982e-15
+  dt=0.0050  G0=1.671765  max|norm drift|=8.882e-16  max|component drift|=3.775e-15
+  elapsed: 2.3s
+
 === 12x12 lattice ===
-  dt=0.0200  G0=3.641545  max|drift|=8.882e-16
-  dt=0.0100  G0=3.641545  max|drift|=2.665e-15
-  dt=0.0050  G0=3.641545  max|drift|=1.776e-15
-  elapsed: 14.7s
+  dt=0.0200  G0=3.641545  max|norm drift|=8.882e-16  max|component drift|=1.998e-15
+  dt=0.0100  G0=3.641545  max|norm drift|=8.882e-16  max|component drift|=2.293e-15
+  dt=0.0050  G0=3.641545  max|norm drift|=1.332e-15  max|component drift|=5.544e-15
+  elapsed: 9.6s
 
 === 32x32 lattice ===
-  dt=0.0200  G0=9.017529  max|drift|=3.553e-15
-  dt=0.0100  G0=9.017529  max|drift|=3.553e-15
-  dt=0.0050  G0=9.017529  max|drift|=5.329e-15
-  elapsed: 100.7s
+  dt=0.0200  G0=9.017529  max|norm drift|=0.000e+00  max|component drift|=2.484e-15
+  dt=0.0100  G0=9.017529  max|norm drift|=1.776e-15  max|component drift|=5.072e-15
+  dt=0.0050  G0=9.017529  max|norm drift|=1.776e-15  max|component drift|=5.433e-15
+  elapsed: 66.8s
+
+=== 64x64 lattice ===
+  dt=0.0200  G0=17.970150  max|norm drift|=3.553e-15  max|component drift|=3.039e-15
+  dt=0.0100  G0=17.970150  max|norm drift|=3.553e-15  max|component drift|=3.858e-15
+  dt=0.0050  G0=17.970150  max|norm drift|=3.553e-15  max|component drift|=5.787e-15
+  elapsed: 250.5s
 
