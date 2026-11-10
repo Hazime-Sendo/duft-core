@@ -1,0 +1,9 @@
+seed=2 N=32 T=40 engine=fast background=lowstrong perturbation=spectrum-flat
+initial plaq distance = 1.5487e-08, plaq_lo/plaq_hi at t=0: 1.128e-07/4.457e-07; at t=T_end: 6.484e-05/2.479e-04
+amp=0.2: exponents from log-linear fits, fit start t0 = 1 / 3 / 6
+  link_hi   +0.1917 (R2=1.00)   +0.1931 (R2=1.00)   +0.1929 (R2=1.00)
+  link_lo   +0.1538 (R2=1.00)   +0.1537 (R2=1.00)   +0.1531 (R2=1.00)
+  plaq_tot  +0.1772 (R2=1.00)   +0.1785 (R2=1.00)   +0.1788 (R2=1.00)
+  plaq_hi   +0.1776 (R2=1.00)   +0.1792 (R2=1.00)   +0.1797 (R2=1.00)
+  plaq_lo   +0.1753 (R2=1.00)   +0.1745 (R2=1.00)   +0.1744 (R2=1.00)
+  energy drift [%]: max over trajectory = 0.01041, at t=T_end = 0.00474
