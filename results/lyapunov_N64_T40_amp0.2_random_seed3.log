@@ -1,0 +1,9 @@
+seed=3 N=64 T=40 engine=fast perturbation=random(all links)
+initial plaq distance = 2.0105e-08, plaq_lo/plaq_hi at t=0: 8.027e-08/1.275e-06; at t=T_end: 4.554e-05/3.776e-04
+amp=0.2: exponents from log-linear fits, fit start t0 = 1 / 3 / 6
+  link_hi   +0.1737 (R2=1.00)   +0.1757 (R2=1.00)   +0.1766 (R2=1.00)
+  link_lo   +0.1501 (R2=0.98)   +0.1432 (R2=0.99)   +0.1382 (R2=1.00)
+  plaq_tot  +0.1647 (R2=1.00)   +0.1679 (R2=1.00)   +0.1697 (R2=1.00)
+  plaq_hi   +0.1644 (R2=1.00)   +0.1678 (R2=1.00)   +0.1698 (R2=1.00)
+  plaq_lo   +0.1718 (R2=1.00)   +0.1706 (R2=1.00)   +0.1677 (R2=1.00)
+  energy drift [%]: max over trajectory = 0.01079, at t=T_end = 0.00496

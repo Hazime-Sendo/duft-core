@@ -1,0 +1,8 @@
+seed=42 perturbation=random(all links)
+amp=0.2: exponents from log-linear fits, fit start t0 = 1 / 3 / 6
+  link_hi   +0.0967 (R2=0.94)   +0.1166 (R2=0.97)   +0.1497 (R2=1.00)
+  link_lo   +0.2810 (R2=0.98)   +0.2516 (R2=0.98)   +0.2025 (R2=1.00)
+  plaq_tot  +0.1042 (R2=0.88)   +0.1340 (R2=0.96)   +0.1711 (R2=1.00)
+  plaq_hi   +0.0942 (R2=0.85)   +0.1235 (R2=0.96)   +0.1607 (R2=0.99)
+  plaq_lo   +0.1936 (R2=0.98)   +0.2053 (R2=0.99)   +0.2114 (R2=0.99)
+  energy drift [%]: max over trajectory = 0.01080, at t=T_end = 0.00513
