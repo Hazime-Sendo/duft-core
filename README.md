@@ -119,4 +119,4 @@ Version 2.0 (see `LICENSE`). The manuscript is licensed separately
 ## Citation
 
 Please cite the manuscript and the Zenodo archive of this repository
-(DOI to be added after the first release).
+10.5281/zenodo.24096164
