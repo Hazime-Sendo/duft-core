@@ -1,0 +1,5 @@
+# Tested versions (Python 3.11.15, Linux x86_64). Minimum versions are
+# conservative lower bounds; the pinned versions below were actually run.
+numpy>=1.24      # tested: 2.4.4
+scipy>=1.10      # tested: 1.17.1
+sympy>=1.12      # tested: 1.14.0

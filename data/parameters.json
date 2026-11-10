@@ -1,0 +1,276 @@
+{
+  "_note": "This repository uses no external datasets. All 'data' are generated deterministically from the random seed and parameters below (numpy.random.default_rng(seed)). This file documents the settings used by the scripts; the scripts themselves hold the authoritative values.",
+  "seed": 42,
+  "verify_energy_convergence": {
+    "lattice": [
+      8,
+      8
+    ],
+    "T_end": 6.0,
+    "amp": 0.2,
+    "dt_list": [
+      0.05,
+      0.02,
+      0.01,
+      0.005,
+      0.0025
+    ]
+  },
+  "verify_gauss_law": {
+    "lattices": [
+      [
+        6,
+        6
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        32,
+        32
+      ],
+      [
+        64,
+        64
+      ]
+    ],
+    "T_end": 2.0,
+    "amp": 0.2,
+    "dt_list": [
+      0.02,
+      0.01,
+      0.005
+    ]
+  },
+  "lyapunov_phase_diagram_smoke_test": {
+    "lattice": [
+      16,
+      16
+    ],
+    "T_end": 5.0,
+    "dt": 0.01,
+    "amp_list": [
+      0.05,
+      0.3
+    ],
+    "k_cut": 8,
+    "fit_from": 3.0,
+    "perturbation": "1e-8 * Gell-Mann lambda_3 on link Ux(0,0)"
+  },
+  "verify_adiabatic_elimination": {
+    "A0": 1.0,
+    "E0": 0.0,
+    "gamma_list": [
+      10,
+      30,
+      100,
+      300,
+      1000,
+      3000,
+      10000,
+      100000
+    ]
+  },
+  "investigate_symplectic_euler_claim": {
+    "lattice": [
+      8,
+      8
+    ],
+    "amp": 0.3,
+    "dt_scan": [
+      0.05,
+      0.02,
+      0.01,
+      0.005,
+      0.002,
+      0.001
+    ],
+    "T_scan": [
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "lyapunov_paper_scale": {
+    "script": "scripts/lyapunov_paper_scale.py <amp>",
+    "lattice": [
+      32,
+      32
+    ],
+    "T_end": 10.0,
+    "dt": 0.01,
+    "amp_list": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "k_cut": 8,
+    "fit_start_times": [
+      1,
+      3,
+      6
+    ],
+    "outputs": "results/lyapunov_amp<amp>.csv and .log",
+    "approx_runtime_per_amp": "15-45 min on one CPU core",
+    "seeds_run": {
+      "0.05": [
+        42
+      ],
+      "0.1": [
+        42,
+        1,
+        2,
+        3
+      ],
+      "0.2": [
+        42,
+        1,
+        2,
+        3
+      ],
+      "0.3": [
+        42
+      ]
+    },
+    "random_perturbation": {
+      "option": "--random",
+      "seeds_run": {
+        "0.1": [
+          42,
+          1,
+          2,
+          3
+        ],
+        "0.2": [
+          42,
+          1,
+          2,
+          3
+        ]
+      },
+      "definition": "random su(3) rotation on every link, total norm = single-link lambda_3 perturbation (1e-8); own RNG stream [seed,1]; same background as the single-link run"
+    },
+    "shell_perturbation": {
+      "option": "--shell low|mid|high",
+      "shells_abs_k": {
+        "low": "|k|<4",
+        "mid": "4<=|k|<8",
+        "high": "|k|>=8"
+      },
+      "definition": "white random traceless-Hermitian field on all links, Fourier-filtered to one |k| shell, rescaled to the single-link total norm (1e-8*sqrt2); links -> exp(iX)U; own RNG stream [seed,2]; same background as the other modes for the same seed",
+      "runs": "amp 0.1, 0.2; seeds 1,2,3,42"
+    },
+    "finer_windows": [
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        8,
+        10
+      ]
+    ],
+    "random_amp_scan": {
+      "amps": [
+        0.05,
+        0.3
+      ],
+      "seeds": [
+        1,
+        2,
+        3
+      ]
+    },
+    "relaxation_tests": {
+      "long_time": {
+        "N": 32,
+        "T": 40,
+        "amps": [
+          0.05,
+          0.1,
+          0.2,
+          0.3
+        ],
+        "seeds": [
+          1,
+          2,
+          3
+        ]
+      },
+      "lattice_size": {
+        "runs": [
+          {
+            "N": 64,
+            "T": 40
+          },
+          {
+            "N": 128,
+            "T": 20
+          }
+        ],
+        "amps": [
+          0.1,
+          0.2
+        ],
+        "seeds": [
+          1,
+          2,
+          3
+        ]
+      },
+      "artificial_spectra": {
+        "option": "--spectrum",
+        "weights": {
+          "lowpeak": "|k|<2",
+          "midpeak": "5<=|k|<7",
+          "highpeak": "|k|>=12",
+          "flat": "1/(2 sqrt(sin^2(pi kx/N)+sin^2(pi ky/N))), w(0)=0"
+        },
+        "rng_stream": "[seed,3]",
+        "amps": [
+          0.1,
+          0.2
+        ],
+        "T": 40
+      },
+      "ratio": "Rpm = sqrt[(plaq_lo^2/n_lo)/(plaq_hi^2/n_hi)], lo |k|<4, hi |k|>=8",
+      "engine": "fast (src/gauge_su3_fast.py), validated against reference"
+    },
+    "backgrounds": {
+      "option": "--bg white|smooth|lowstrong",
+      "smooth": "same random su(3) field low-pass |k|<=2, rescaled to equal rms per link, U=exp(i amp H), E=0",
+      "lowstrong": "white field with |k|<4 modes x3",
+      "extra": "smooth amp 0.5 (random, lowpeak, highpeak), N=32, T=40",
+      "N128": "seeds 1,2, T=20"
+    }
+  },
+  "analyze_lyapunov_windows": {
+    "windows": [
+      [
+        3,
+        7
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        7,
+        10
+      ]
+    ],
+    "note": "windows must lie inside T=10"
+  }
+}

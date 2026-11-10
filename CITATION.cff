@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "duft-core: numerical verification code for Dynamic Unified Field Theory (DUFT)"
+type: software
+authors:
+  - family-names: Sendo
+    given-names: Hazime
+    orcid: "https://orcid.org/0009-0007-3285-0308"
+repository-code: "https://github.com/Hazime-Sendo/duft-core"
+license: Apache-2.0
+# doi: TO BE INSERTED after the Zenodo release
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Sendo
+      given-names: Hazime
+  title: "Dynamic Unified Field Theory (DUFT): A Hamilton-Gradient Dual Framework with Dissipative Limits, Static Subsets, and Perturbation Growth"
+  status: in-preparation

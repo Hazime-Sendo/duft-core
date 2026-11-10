@@ -1,0 +1,31 @@
+Full covariant d'Alembertian:
+         2                                                  2                  ↪
+   2    ∂                        ∂              d          ∂                 ∂ ↪
+- a (t)⋅───(Ψ(t, x, y)) - 2⋅a(t)⋅──(Ψ(t, x, y))⋅──(a(t)) + ───(Ψ(t, x, y)) + ─ ↪
+          2                      ∂t             dt           2                 ↪
+        ∂t                                                 ∂x                ∂ ↪
+────────────────────────────────────────────────────────────────────────────── ↪
+                                            2                                  ↪
+                                           a (t)                               ↪
+
+↪ 2             
+↪               
+↪ ──(Ψ(t, x, y))
+↪  2            
+↪ y             
+↪ ──────────────
+↪               
+↪               
+
+Homogeneous-mode reduction:
+         2                                        
+   2    d                     d           d       
+- a (t)⋅───(Ψₕₒₘ(t)) - 2⋅a(t)⋅──(Ψₕₒₘ(t))⋅──(a(t))
+          2                   dt          dt      
+        dt                                        
+──────────────────────────────────────────────────
+                       2                          
+                      a (t)                       
+
+KG_eq + DUFT_update (should be 0, confirming equivalence up to the metric-signature sign):
+0

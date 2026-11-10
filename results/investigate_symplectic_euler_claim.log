@@ -1,0 +1,45 @@
+
+=== Scheme A (EU-kick, momentum-first) ===
+-- dt scan at fixed T_end=2.0 --
+  dt= 0.0500  H0=   75.4948  H_end=        74.961  H_end/H0=      0.9929  blew_up=False
+  dt= 0.0200  H0=   75.4948  H_end=       75.2301  H_end/H0=      0.9965  blew_up=False
+  dt= 0.0100  H0=   75.4948  H_end=       75.3541  H_end/H0=      0.9981  blew_up=False
+  dt= 0.0050  H0=   75.4948  H_end=       75.4224  H_end/H0=       0.999  blew_up=False
+  dt= 0.0020  H0=   75.4948  H_end=       75.4653  H_end/H0=      0.9996  blew_up=False
+  dt= 0.0010  H0=   75.4948  H_end=         75.48  H_end/H0=      0.9998  blew_up=False
+-- T_end scan at fixed dt=0.01 --
+  T_end=  1.00  H0=   75.4948  H_end=       75.9749  H_end/H0=       1.006  blew_up=False
+  T_end=  2.00  H0=   75.4948  H_end=       75.3541  H_end/H0=      0.9981  blew_up=False
+  T_end=  5.00  H0=   75.4948  H_end=       75.5318  H_end/H0=           1  blew_up=False
+  T_end= 10.00  H0=   75.4948  H_end=       75.4542  H_end/H0=      0.9995  blew_up=False
+  T_end= 20.00  H0=   75.4948  H_end=        75.491  H_end/H0=      0.9999  blew_up=False
+
+=== Scheme B (EU-kick, field-first) ===
+-- dt scan at fixed T_end=2.0 --
+  dt= 0.0500  H0=   75.4948  H_end=       76.4426  H_end/H0=       1.013  blew_up=False
+  dt= 0.0200  H0=   75.4948  H_end=       75.8256  H_end/H0=       1.004  blew_up=False
+  dt= 0.0100  H0=   75.4948  H_end=        75.652  H_end/H0=       1.002  blew_up=False
+  dt= 0.0050  H0=   75.4948  H_end=       75.5714  H_end/H0=       1.001  blew_up=False
+  dt= 0.0020  H0=   75.4948  H_end=       75.5249  H_end/H0=           1  blew_up=False
+  dt= 0.0010  H0=   75.4948  H_end=       75.5098  H_end/H0=           1  blew_up=False
+-- T_end scan at fixed dt=0.01 --
+  T_end=  1.00  H0=   75.4948  H_end=       75.0323  H_end/H0=      0.9939  blew_up=False
+  T_end=  2.00  H0=   75.4948  H_end=        75.652  H_end/H0=       1.002  blew_up=False
+  T_end=  5.00  H0=   75.4948  H_end=       75.4681  H_end/H0=      0.9996  blew_up=False
+  T_end= 10.00  H0=   75.4948  H_end=       75.5475  H_end/H0=       1.001  blew_up=False
+  T_end= 20.00  H0=   75.4948  H_end=       75.5103  H_end/H0=           1  blew_up=False
+
+=== Scheme C (explicit forward Euler) ===
+-- dt scan at fixed T_end=2.0 --
+  dt= 0.0500  H0=   75.4948  H_end=       107.691  H_end/H0=       1.426  blew_up=False
+  dt= 0.0200  H0=   75.4948  H_end=       87.3355  H_end/H0=       1.157  blew_up=False
+  dt= 0.0100  H0=   75.4948  H_end=       81.2353  H_end/H0=       1.076  blew_up=False
+  dt= 0.0050  H0=   75.4948  H_end=       78.3198  H_end/H0=       1.037  blew_up=False
+  dt= 0.0020  H0=   75.4948  H_end=        76.614  H_end/H0=       1.015  blew_up=False
+  dt= 0.0010  H0=   75.4948  H_end=       76.0526  H_end/H0=       1.007  blew_up=False
+-- T_end scan at fixed dt=0.01 --
+  T_end=  1.00  H0=   75.4948  H_end=        78.437  H_end/H0=       1.039  blew_up=False
+  T_end=  2.00  H0=   75.4948  H_end=       81.2353  H_end/H0=       1.076  blew_up=False
+  T_end=  5.00  H0=   75.4948  H_end=       90.0611  H_end/H0=       1.193  blew_up=False
+  T_end= 10.00  H0=   75.4948  H_end=       105.321  H_end/H0=       1.395  blew_up=False
+  T_end= 20.00  H0=   75.4948  H_end=       139.353  H_end/H0=       1.846  blew_up=False

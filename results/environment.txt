@@ -1,0 +1,4 @@
+date_utc: 2026-10-11T23:59:18Z
+Python 3.11.15
+numpy 2.4.4 | scipy 1.17.1 | sympy 1.14.0
+Linux 6.18.44-fc-v114 x86_64
