@@ -1,0 +1,18 @@
+
+=== amp=0.1: plaquette low-k minus high-k exponent (positive = low-k grows faster) ===
+  window (3, 7): s1:+0.16/+0.01  s2:+0.14/+0.01  s3:+0.09/+0.01  s42:+0.06/+0.01
+     diff mean=+0.105 sd=0.042 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.09/+0.03  s2:+0.05/+0.02  s3:+0.04/+0.02  s42:+0.10/+0.03
+     diff mean=+0.049 sd=0.026 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.13/+0.05  s2:+0.10/+0.02  s3:+0.11/+0.04  s42:+0.19/+0.04
+     diff mean=+0.096 sd=0.035 seeds with diff>0: 4/4
+  plaq_tot exponent (window 3-7) per seed: s1:+0.013  s2:+0.013  s3:+0.010  s42:+0.009
+
+=== amp=0.2: plaquette low-k minus high-k exponent (positive = low-k grows faster) ===
+  window (3, 7): s1:+0.32/+0.12  s2:+0.24/+0.08  s3:+0.23/+0.10  s42:+0.27/+0.13
+     diff mean=+0.154 sd=0.031 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.18/+0.17  s2:+0.26/+0.11  s3:+0.18/+0.16  s42:+0.21/+0.19
+     diff mean=+0.047 sd=0.070 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.07/+0.20  s2:+0.10/+0.16  s3:+0.18/+0.19  s42:+0.13/+0.19
+     diff mean=-0.066 sd=0.054 seeds with diff>0: 0/4
+  plaq_tot exponent (window 3-7) per seed: s1:+0.140  s2:+0.094  s3:+0.114  s42:+0.142

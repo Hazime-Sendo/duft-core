@@ -1,0 +1,371 @@
+##### background: white #####
+  background amp 0.05: mean(1 - ReTrP/3) = 1.31e-02;  plaquette-field amplitude ratio low-k/high-k per mode = 0.25
+  background amp 0.1: mean(1 - ReTrP/3) = 5.14e-02;  plaquette-field amplitude ratio low-k/high-k per mode = 0.30
+  background amp 0.2: mean(1 - ReTrP/3) = 1.92e-01;  plaquette-field amplitude ratio low-k/high-k per mode = 0.46
+  background amp 0.3: mean(1 - ReTrP/3) = 3.85e-01;  plaquette-field amplitude ratio low-k/high-k per mode = 0.62
+per-mode amplitude ratio Rpm = sqrt(mean power low / mean power high) of the plaquette difference;
+values below are geometric means over seeds; lambda_low - lambda_high = d ln R / dt.
+
+=== N=32, T=40, amp=0.05: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  random (white)    3       0.268   0.220   0.352   0.370   0.385   0.556   0.579   0.082
+  spread across initial spectra at t=10: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  spread across initial spectra at t=20: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  spread across initial spectra at t=40: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    random (white)    R*=10.646  B=-3.693  gamma=0.007  rms=0.137
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    random (white)    std ln S = 0.476   P(bins1-3)/P(bins12-15) = 0.36
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    random (white)    -0.029(0/3)  +0.008(3/3)  +0.015(3/3)  +0.004(2/3)  +0.036(3/3)  +0.001(2/3)
+
+=== N=32, T=40, amp=0.1: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3       1.695   1.805   0.695   0.923   0.961   1.059   1.102   0.032
+  shell-low         3       3.858   2.349   3.103   1.814   1.060   1.103   1.086   0.050
+  midpeak           3       0.711   1.013   1.154   1.193   1.038   1.103   1.086   0.054
+  flat (plaquette)  3       0.949   0.825   1.044   0.991   0.958   1.020   1.102   0.081
+  random (white)    3       0.356   0.325   0.504   0.637   0.890   1.014   1.056   0.063
+  shell-high        3       0.276   0.258   0.387   0.555   0.900   0.982   1.032   0.056
+  highpeak          3       0.280   0.236   0.354   0.485   0.829   0.991   1.098   0.038
+  spread across initial spectra at t=10: max/min of Rpm = 3.739 (ln-range 1.319; n spectra 7)
+  spread across initial spectra at t=20: max/min of Rpm = 1.278 (ln-range 0.246; n spectra 7)
+  spread across initial spectra at t=40: max/min of Rpm = 1.068 (ln-range 0.066; n spectra 7)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 0.958  B=+1.301  gamma=0.593  rms=0.150
+    shell-low         R*= 1.038  B=+1.494  gamma=0.128  rms=0.160
+    midpeak           R*= 1.095  B=-0.472  gamma=0.459  rms=0.100
+    flat (plaquette)  R*= 0.969  B=+0.429  gamma=1.173  rms=0.129
+    random (white)    R*= 1.148  B=-1.262  gamma=0.076  rms=0.095
+    shell-high        R*= 1.106  B=-1.676  gamma=0.092  rms=0.045
+    highpeak          R*= 1.239  B=-1.805  gamma=0.071  rms=0.051
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 0.109   P(bins1-3)/P(bins12-15) = 1.20
+    shell-low         std ln S = 0.109   P(bins1-3)/P(bins12-15) = 1.17
+    midpeak           std ln S = 0.117   P(bins1-3)/P(bins12-15) = 1.14
+    flat (plaquette)  std ln S = 0.103   P(bins1-3)/P(bins12-15) = 1.20
+    random (white)    std ln S = 0.095   P(bins1-3)/P(bins12-15) = 1.09
+    shell-high        std ln S = 0.129   P(bins1-3)/P(bins12-15) = 1.09
+    highpeak          std ln S = 0.100   P(bins1-3)/P(bins12-15) = 1.17
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.282(0/3)  +0.070(3/3)  -0.022(0/3)  +0.027(3/3)  +0.011(3/3)  +0.004(2/3)
+    shell-low         -0.150(0/3)  -0.097(0/3)  -0.055(0/3)  -0.032(0/3)  +0.003(2/3)  -0.004(1/3)
+    midpeak           +0.087(3/3)  +0.010(3/3)  -0.016(0/3)  -0.020(1/3)  +0.004(2/3)  -0.002(1/3)
+    flat (plaquette)  -0.091(0/3)  -0.023(0/3)  -0.007(1/3)  +0.005(2/3)  +0.012(3/3)  +0.005(2/3)
+    random (white)    +0.026(3/3)  +0.044(3/3)  +0.057(3/3)  +0.028(3/3)  +0.010(3/3)  +0.003(2/3)
+    shell-high        +0.112(3/3)  +0.064(3/3)  +0.053(3/3)  +0.051(3/3)  +0.006(3/3)  +0.002(2/3)
+    highpeak          +0.091(3/3)  +0.048(3/3)  +0.082(3/3)  +0.026(3/3)  +0.020(3/3)  +0.010(3/3)
+
+=== N=32, T=40, amp=0.2: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3       0.993   1.038   0.944   1.183   1.143   1.150   1.096   0.022
+  shell-low         3       1.865   1.295   1.585   1.304   1.234   1.118   1.100   0.015
+  midpeak           3       0.766   1.025   1.261   1.310   1.171   1.129   1.100   0.062
+  flat (plaquette)  3       0.881   0.826   1.104   1.190   1.211   1.147   1.117   0.036
+  random (white)    3       0.567   0.575   0.916   1.200   1.179   1.140   1.097   0.009
+  shell-high        3       0.530   0.530   0.814   1.204   1.140   1.077   1.079   0.020
+  highpeak          3       0.542   0.490   0.761   1.146   1.203   1.085   1.084   0.032
+  spread across initial spectra at t=10: max/min of Rpm = 1.143 (ln-range 0.133; n spectra 7)
+  spread across initial spectra at t=20: max/min of Rpm = 1.082 (ln-range 0.079; n spectra 7)
+  spread across initial spectra at t=40: max/min of Rpm = 1.036 (ln-range 0.035; n spectra 7)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 1.139  B=+0.206  gamma=1.190  rms=0.100
+    shell-low         R*= 1.173  B=+0.828  gamma=0.431  rms=0.123
+    midpeak           R*= 1.178  B=-0.481  gamma=0.530  rms=0.094
+    flat (plaquette)  R*= 1.156  B=-0.176  gamma=0.231  rms=0.102
+    random (white)    R*= 1.161  B=-0.925  gamma=0.282  rms=0.082
+    shell-high        R*= 1.155  B=-1.173  gamma=0.280  rms=0.071
+    highpeak          R*= 1.151  B=-1.170  gamma=0.250  rms=0.070
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 0.111   P(bins1-3)/P(bins12-15) = 1.21
+    shell-low         std ln S = 0.105   P(bins1-3)/P(bins12-15) = 1.26
+    midpeak           std ln S = 0.108   P(bins1-3)/P(bins12-15) = 1.22
+    flat (plaquette)  std ln S = 0.116   P(bins1-3)/P(bins12-15) = 1.26
+    random (white)    std ln S = 0.099   P(bins1-3)/P(bins12-15) = 1.18
+    shell-high        std ln S = 0.083   P(bins1-3)/P(bins12-15) = 1.15
+    highpeak          std ln S = 0.086   P(bins1-3)/P(bins12-15) = 1.15
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.093(0/3)  +0.030(3/3)  +0.005(2/3)  -0.014(0/3)  -0.003(0/3)  -0.005(0/3)
+    shell-low         -0.124(0/3)  -0.033(0/3)  -0.004(1/3)  +0.003(2/3)  -0.007(0/3)  -0.003(0/3)
+    midpeak           +0.095(3/3)  -0.000(1/3)  -0.013(0/3)  -0.009(1/3)  -0.002(1/3)  -0.005(0/3)
+    flat (plaquette)  -0.021(0/3)  +0.013(3/3)  +0.010(3/3)  -0.010(1/3)  -0.007(0/3)  -0.004(0/3)
+    random (white)    +0.095(3/3)  +0.046(3/3)  +0.002(2/3)  -0.009(1/3)  -0.008(0/3)  -0.005(0/3)
+    shell-high        +0.128(3/3)  +0.074(3/3)  -0.005(1/3)  -0.002(2/3)  -0.008(0/3)  -0.003(0/3)
+    highpeak          +0.112(3/3)  +0.079(3/3)  +0.010(3/3)  -0.001(1/3)  -0.003(0/3)  -0.001(1/3)
+
+=== N=32, T=40, amp=0.3: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  random (white)    3       0.750   0.821   1.175   1.215   1.040   0.998   1.010   0.050
+  spread across initial spectra at t=10: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  spread across initial spectra at t=20: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  spread across initial spectra at t=40: max/min of Rpm = 1.000 (ln-range 0.000; n spectra 1)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    random (white)    R*= 1.060  B=-0.497  gamma=0.609  rms=0.085
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    random (white)    std ln S = 0.076   P(bins1-3)/P(bins12-15) = 1.00
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    random (white)    +0.115(3/3)  -0.011(0/3)  -0.025(0/3)  -0.008(0/3)  -0.004(0/3)  -0.002(1/3)
+
+=== amplitude dependence (random perturbation, N=32, T=40, seeds 1-3) ===
+  amp    R0     R(10)   R(40)   asymptote R*   gamma
+  0.05   0.268  0.370  0.579   10.646       0.007
+  0.1    0.356  0.637  1.056    1.148       0.076
+  0.2    0.567  1.200  1.097    1.161       0.282
+  0.3    0.750  1.215  1.010    1.060       0.609
+
+=== lattice-size dependence, amp=0.1, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.356   0.325   0.504   0.637   0.890         5.905   0.022  | +0.044(3/3) +0.041(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+    64    40  3       0.335   0.331   0.442   0.816   0.969         1.425   0.093  | +0.119(3/3) +0.017(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+   128    20  3       0.327   0.287   0.369   0.837   1.095         2.613   0.067  | +0.162(3/3) +0.021(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+
+=== lattice-size dependence, amp=0.2, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.567   0.575   0.916   1.200   1.179         1.272   0.218  | +0.046(3/3) -0.004(1/3)
+    64    40  3       0.589   0.586   0.890   1.253   1.131         1.264   0.240  | +0.055(3/3) -0.011(0/3)
+   128    20  3       0.601   0.555   0.868   1.223   1.158         1.242   0.237  | +0.047(3/3) -0.002(1/3)
+
+=== shell-resolved spectrum collapse (N=32, T=40; normalised per-mode power, bins 1-15) ===
+  amp 0.1 t=0  : max over k-bins of |ln S_a - mean ln S| = 3.00 (worst: lowpeak); median over spectra 1.39; typical bin-to-bin variation of the mean spectrum 0.34
+  amp 0.1 t=10 : max over k-bins of |ln S_a - mean ln S| = 1.82 (worst: midpeak); median over spectra 0.91; typical bin-to-bin variation of the mean spectrum 0.24
+  amp 0.1 t=40 : max over k-bins of |ln S_a - mean ln S| = 0.12 (worst: random (white)); median over spectra 0.09; typical bin-to-bin variation of the mean spectrum 0.06
+  amp 0.2 t=0  : max over k-bins of |ln S_a - mean ln S| = 1.80 (worst: midpeak); median over spectra 0.73; typical bin-to-bin variation of the mean spectrum 0.22
+  amp 0.2 t=10 : max over k-bins of |ln S_a - mean ln S| = 0.20 (worst: highpeak); median over spectra 0.13; typical bin-to-bin variation of the mean spectrum 0.15
+  amp 0.2 t=40 : max over k-bins of |ln S_a - mean ln S| = 0.13 (worst: lowpeak); median over spectra 0.09; typical bin-to-bin variation of the mean spectrum 0.07
+##### background: smooth #####
+  background amp 0.1: mean(1 - ReTrP/3) = 1.63e-03;  plaquette-field amplitude ratio low-k/high-k per mode = 8899.92
+  background amp 0.2: mean(1 - ReTrP/3) = 1.42e-02;  plaquette-field amplitude ratio low-k/high-k per mode = 1487.33
+  background amp 0.5: mean(1 - ReTrP/3) = 2.76e-01;  plaquette-field amplitude ratio low-k/high-k per mode = 133.32
+per-mode amplitude ratio Rpm = sqrt(mean power low / mean power high) of the plaquette difference;
+values below are geometric means over seeds; lambda_low - lambda_high = d ln R / dt.
+
+=== N=32, T=40, amp=0.1: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3      17386.802  718.926  152.392  68.019  28.001  16.014  12.248   0.059
+  midpeak           3       3.382   2.844   2.974   2.272   2.794   3.571   5.333   0.067
+  flat (plaquette)  3       1.281   0.965   1.311   1.696   3.142   5.002   7.670   0.172
+  random (white)    3       0.279   0.219   0.294   0.350   0.598   1.044   1.977   0.220
+  highpeak          3       0.000   0.000   0.000   0.001   0.007   0.015   0.026   0.153
+  spread across initial spectra at t=10: max/min of Rpm = 50838.553 (ln-range 10.836; n spectra 5)
+  spread across initial spectra at t=20: max/min of Rpm = 3942.566 (ln-range 8.280; n spectra 5)
+  spread across initial spectra at t=40: max/min of Rpm = 473.353 (ln-range 6.160; n spectra 5)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*=17.323  B=+5.750  gamma=0.154  rms=0.318
+    midpeak           R*=22026.466  B=-9.230  gamma=0.002  rms=0.162
+    flat (plaquette)  R*=22026.466  B=-9.960  gamma=0.006  rms=0.145
+    random (white)    R*=4656.843  B=-10.000  gamma=0.006  rms=0.160
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 3.337   P(bins1-3)/P(bins12-15) = 2040.32
+    midpeak           std ln S = 2.232   P(bins1-3)/P(bins12-15) = 143.47
+    flat (plaquette)  std ln S = 1.816   P(bins1-3)/P(bins12-15) = 102.29
+    random (white)    std ln S = 0.688   P(bins1-3)/P(bins12-15) = 4.93
+    highpeak          std ln S = 2.913   P(bins1-3)/P(bins12-15) = 0.00
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.938(0/3)  -0.139(0/3)  -0.070(0/3)  -0.106(0/3)  -0.056(0/3)  -0.014(1/3)
+    midpeak           -0.086(0/3)  -0.028(0/3)  +0.024(3/3)  +0.019(3/3)  +0.024(3/3)  +0.043(3/3)
+    flat (plaquette)  -0.054(0/3)  +0.050(3/3)  +0.077(3/3)  +0.059(3/3)  +0.050(3/3)  +0.046(3/3)
+    random (white)    -0.041(0/3)  +0.038(3/3)  +0.052(3/3)  +0.053(3/3)  +0.054(3/3)  +0.068(3/3)
+    highpeak          +0.560(3/3)  +0.223(3/3)  +0.176(3/3)  +0.147(3/3)  +0.082(3/3)  +0.043(3/3)
+
+=== N=32, T=40, amp=0.2: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3      1890.250  101.965  22.756   7.879   4.327   3.301   2.824   0.006
+  midpeak           3       3.312   3.062   2.956   3.700   4.207   3.139   2.791   0.073
+  flat (plaquette)  3       1.856   1.846   2.015   3.285   3.970   3.167   2.801   0.041
+  random (white)    3       0.384   0.414   0.499   0.925   2.224   3.052   2.717   0.041
+  highpeak          3       0.000   0.001   0.011   0.053   0.232   0.618   1.420   0.067
+  spread across initial spectra at t=10: max/min of Rpm = 148.500 (ln-range 5.001; n spectra 5)
+  spread across initial spectra at t=20: max/min of Rpm = 18.660 (ln-range 2.926; n spectra 5)
+  spread across initial spectra at t=40: max/min of Rpm = 1.989 (ln-range 0.688; n spectra 5)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 3.509  B=+5.664  gamma=0.209  rms=0.187
+    midpeak           R*= 3.523  B=-0.238  gamma=0.236  rms=0.142
+    flat (plaquette)  R*= 3.503  B=-0.862  gamma=0.188  rms=0.185
+    random (white)    R*= 4.300  B=-2.786  gamma=0.064  rms=0.174
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 1.005   P(bins1-3)/P(bins12-15) = 11.34
+    midpeak           std ln S = 0.980   P(bins1-3)/P(bins12-15) = 10.77
+    flat (plaquette)  std ln S = 0.978   P(bins1-3)/P(bins12-15) = 10.44
+    random (white)    std ln S = 0.971   P(bins1-3)/P(bins12-15) = 10.42
+    highpeak          std ln S = 0.353   P(bins1-3)/P(bins12-15) = 2.43
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.870(0/3)  -0.210(0/3)  -0.070(0/3)  -0.053(0/3)  -0.031(0/3)  -0.013(0/3)
+    midpeak           -0.030(0/3)  +0.047(3/3)  +0.027(3/3)  +0.004(2/3)  -0.022(0/3)  -0.010(1/3)
+    flat (plaquette)  -0.033(0/3)  +0.083(3/3)  +0.057(3/3)  -0.006(0/3)  -0.021(0/3)  -0.016(0/3)
+    random (white)    +0.003(1/3)  +0.101(3/3)  +0.109(3/3)  +0.087(3/3)  +0.036(3/3)  -0.009(0/3)
+    highpeak          +1.048(3/3)  +0.313(3/3)  +0.184(3/3)  +0.118(3/3)  +0.098(3/3)  +0.083(3/3)
+
+=== N=32, T=40, amp=0.5: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3      108.213  11.651   2.830   1.376   1.144   1.005   1.007   0.062
+  random (white)    3       0.725   0.952   1.536   1.416   1.100   1.004   1.031   0.028
+  highpeak          3       0.003   0.082   0.494   1.171   1.089   1.020   1.071   0.052
+  spread across initial spectra at t=10: max/min of Rpm = 1.209 (ln-range 0.190; n spectra 3)
+  spread across initial spectra at t=20: max/min of Rpm = 1.051 (ln-range 0.049; n spectra 3)
+  spread across initial spectra at t=40: max/min of Rpm = 1.063 (ln-range 0.062; n spectra 3)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 1.083  B=+4.559  gamma=0.318  rms=0.080
+    random (white)    R*= 1.140  B=-0.572  gamma=0.725  rms=0.151
+    highpeak          R*= 1.109  B=-5.975  gamma=0.410  rms=0.127
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 0.102   P(bins1-3)/P(bins12-15) = 0.98
+    random (white)    std ln S = 0.085   P(bins1-3)/P(bins12-15) = 1.09
+    highpeak          std ln S = 0.098   P(bins1-3)/P(bins12-15) = 1.20
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.723(0/3)  -0.126(0/3)  -0.031(0/3)  -0.017(0/3)  -0.006(0/3)  -0.005(1/3)
+    random (white)    +0.164(3/3)  -0.016(0/3)  -0.038(0/3)  -0.025(0/3)  -0.011(0/3)  -0.002(0/3)
+    highpeak          +0.938(3/3)  +0.152(3/3)  -0.010(0/3)  -0.016(0/3)  -0.004(0/3)  +0.003(2/3)
+
+=== amplitude dependence (random perturbation, N=32, T=40, seeds 1-3) ===
+  amp    R0     R(10)   R(40)   asymptote R*   gamma
+  0.1    0.279  0.350  1.977   4656.843       0.006
+  0.2    0.384  0.925  2.717    4.300       0.064
+  0.5    0.725  1.416  1.031    1.140       0.725
+
+=== lattice-size dependence, amp=0.1, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.279   0.219   0.294   0.350   0.598        5367.900   0.004  | +0.038(3/3) +0.053(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+    64    40  3       0.217   0.186   0.214   0.295   0.545        3855.326   0.006  | +0.059(3/3) +0.058(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+   128    20  2       0.188   0.171   0.173   0.252   0.408        3153.179   0.006  | +0.062(2/2) +0.043(2/2)  [fit extrapolates beyond data: R*, gamma unreliable]
+
+=== lattice-size dependence, amp=0.2, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.384   0.414   0.499   0.925   2.224        6928.563   0.011  | +0.101(3/3) +0.093(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+    64    40  3       0.367   0.319   0.484   0.889   1.974        346.383   0.016  | +0.099(3/3) +0.081(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+   128    20  2       0.348   0.278   0.486   0.911   2.070        236.969   0.018  | +0.104(2/2) +0.092(2/2)  [fit extrapolates beyond data: R*, gamma unreliable]
+
+=== shell-resolved spectrum collapse (N=32, T=40; normalised per-mode power, bins 1-15) ===
+  amp 0.1 t=0  : max over k-bins of |ln S_a - mean ln S| = 20.87 (worst: highpeak); median over spectra 14.25; typical bin-to-bin variation of the mean spectrum 1.57
+  amp 0.1 t=10 : max over k-bins of |ln S_a - mean ln S| = 11.03 (worst: highpeak); median over spectra 5.29; typical bin-to-bin variation of the mean spectrum 0.88
+  amp 0.1 t=40 : max over k-bins of |ln S_a - mean ln S| = 6.66 (worst: highpeak); median over spectra 2.95; typical bin-to-bin variation of the mean spectrum 1.01
+  amp 0.2 t=0  : max over k-bins of |ln S_a - mean ln S| = 19.66 (worst: lowpeak); median over spectra 9.58; typical bin-to-bin variation of the mean spectrum 1.69
+  amp 0.2 t=10 : max over k-bins of |ln S_a - mean ln S| = 5.01 (worst: highpeak); median over spectra 2.50; typical bin-to-bin variation of the mean spectrum 0.56
+  amp 0.2 t=40 : max over k-bins of |ln S_a - mean ln S| = 1.52 (worst: highpeak); median over spectra 0.37; typical bin-to-bin variation of the mean spectrum 0.85
+##### background: lowstrong #####
+  background amp 0.1: mean(1 - ReTrP/3) = 5.24e-02;  plaquette-field amplitude ratio low-k/high-k per mode = 0.71
+  background amp 0.2: mean(1 - ReTrP/3) = 1.95e-01;  plaquette-field amplitude ratio low-k/high-k per mode = 0.80
+per-mode amplitude ratio Rpm = sqrt(mean power low / mean power high) of the plaquette difference;
+values below are geometric means over seeds; lambda_low - lambda_high = d ln R / dt.
+
+=== N=32, T=40, amp=0.1: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3       2.161   1.937   1.265   1.357   1.232   1.137   1.174   0.044
+  midpeak           3       0.871   1.299   1.424   1.389   1.267   1.197   1.129   0.065
+  flat (plaquette)  3       1.021   0.843   1.110   1.207   1.164   1.135   1.205   0.048
+  random (white)    3       0.367   0.338   0.516   0.771   1.129   1.098   1.163   0.076
+  highpeak          3       0.279   0.237   0.364   0.613   1.075   1.105   1.159   0.041
+  spread across initial spectra at t=10: max/min of Rpm = 2.266 (ln-range 0.818; n spectra 5)
+  spread across initial spectra at t=20: max/min of Rpm = 1.178 (ln-range 0.164; n spectra 5)
+  spread across initial spectra at t=40: max/min of Rpm = 1.068 (ln-range 0.065; n spectra 5)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 1.233  B=+1.066  gamma=0.419  rms=0.096
+    midpeak           R*= 1.261  B=-0.317  gamma=0.537  rms=0.108
+    flat (plaquette)  R*= 1.180  B=-0.103  gamma=0.096  rms=0.122  (starts near asymptote: gamma ill-determined)
+    random (white)    R*= 1.235  B=-1.410  gamma=0.111  rms=0.117
+    highpeak          R*= 1.264  B=-1.951  gamma=0.104  rms=0.074
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 0.138   P(bins1-3)/P(bins12-15) = 1.39
+    midpeak           std ln S = 0.120   P(bins1-3)/P(bins12-15) = 1.28
+    flat (plaquette)  std ln S = 0.155   P(bins1-3)/P(bins12-15) = 1.45
+    random (white)    std ln S = 0.140   P(bins1-3)/P(bins12-15) = 1.35
+    highpeak          std ln S = 0.139   P(bins1-3)/P(bins12-15) = 1.39
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.189(0/3)  +0.025(3/3)  +0.000(1/3)  -0.018(0/3)  -0.010(0/3)  +0.004(3/3)
+    midpeak           +0.056(3/3)  -0.003(0/3)  -0.006(0/3)  -0.011(0/3)  -0.012(0/3)  -0.005(1/3)
+    flat (plaquette)  -0.067(0/3)  +0.013(3/3)  -0.008(1/3)  -0.005(1/3)  -0.003(1/3)  +0.007(3/3)
+    random (white)    +0.027(3/3)  +0.084(3/3)  +0.069(3/3)  +0.018(3/3)  -0.002(1/3)  +0.004(2/3)
+    highpeak          +0.094(3/3)  +0.095(3/3)  +0.081(3/3)  +0.030(3/3)  +0.008(3/3)  +0.003(2/3)
+
+=== N=32, T=40, amp=0.2: Rpm(t) per initial spectrum ===
+  initial spectrum   seeds   t=0     t=2     t=5     t=10    t=20    t=30    t=40     spread-of-ln(R) over seeds at T
+  lowpeak           3       1.580   1.296   1.241   1.319   1.187   1.098   1.100   0.025
+  midpeak           3       0.907   1.252   1.359   1.375   1.161   1.159   1.115   0.038
+  flat (plaquette)  3       1.059   0.926   1.189   1.306   1.157   1.153   1.126   0.028
+  random (white)    3       0.590   0.621   0.941   1.287   1.162   1.134   1.084   0.043
+  highpeak          3       0.541   0.494   0.801   1.254   1.222   1.168   1.107   0.007
+  spread across initial spectra at t=10: max/min of Rpm = 1.096 (ln-range 0.092; n spectra 5)
+  spread across initial spectra at t=20: max/min of Rpm = 1.056 (ln-range 0.055; n spectra 5)
+  spread across initial spectra at t=40: max/min of Rpm = 1.038 (ln-range 0.037; n spectra 5)
+  fit ln Rpm = A + B exp(-gamma t):  asymptote A -> R*=exp(A), rate gamma, rms residual
+    lowpeak           R*= 1.097  B=+0.391  gamma=0.087  rms=0.103
+    midpeak           R*= 0.015  B=+4.440  gamma=0.001  rms=0.096
+    flat (plaquette)  R*= 0.047  B=+3.280  gamma=0.001  rms=0.101
+    random (white)    R*= 1.172  B=-0.884  gamma=0.312  rms=0.096
+    highpeak          R*= 1.186  B=-1.219  gamma=0.272  rms=0.083
+  spectrum flatness at T (std of ln per-mode power over |k| bins 1-15; 0 = flat; low/high power ratio, 1 = flat):
+    lowpeak           std ln S = 0.120   P(bins1-3)/P(bins12-15) = 1.23
+    midpeak           std ln S = 0.096   P(bins1-3)/P(bins12-15) = 1.23
+    flat (plaquette)  std ln S = 0.116   P(bins1-3)/P(bins12-15) = 1.28
+    random (white)    std ln S = 0.112   P(bins1-3)/P(bins12-15) = 1.16
+    highpeak          std ln S = 0.126   P(bins1-3)/P(bins12-15) = 1.25
+  lambda_low - lambda_high (= slope of ln Rpm) in consecutive windows [mean over seeds; seeds positive]:
+                       0-5          5-10        10-15        15-20        20-30        30-40      
+    lowpeak           -0.110(0/3)  +0.004(2/3)  -0.004(1/3)  -0.008(1/3)  -0.007(0/3)  -0.001(1/3)
+    midpeak           +0.062(3/3)  -0.004(1/3)  -0.006(0/3)  -0.022(0/3)  -0.010(0/3)  -0.005(0/3)
+    flat (plaquette)  -0.021(0/3)  +0.012(3/3)  -0.004(2/3)  -0.011(1/3)  -0.004(1/3)  -0.001(2/3)
+    random (white)    +0.087(3/3)  +0.045(3/3)  -0.002(1/3)  -0.017(0/3)  -0.001(1/3)  -0.000(2/3)
+    highpeak          +0.114(3/3)  +0.067(3/3)  +0.001(1/3)  -0.008(1/3)  -0.008(0/3)  -0.002(1/3)
+
+=== amplitude dependence (random perturbation, N=32, T=40, seeds 1-3) ===
+  amp    R0     R(10)   R(40)   asymptote R*   gamma
+  0.1    0.367  0.771  1.163    1.235       0.111
+  0.2    0.590  1.287  1.084    1.172       0.312
+
+=== lattice-size dependence, amp=0.1, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.367   0.338   0.516   0.771   1.129         3.904   0.039  | +0.084(3/3) +0.037(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+    64    40  3       0.339   0.331   0.447   0.820   1.033         1.675   0.082  | +0.116(3/3) +0.024(3/3)  [fit extrapolates beyond data: R*, gamma unreliable]
+   128    20  2       0.332   0.287   0.367   0.835   1.058         2.471   0.070  | +0.157(2/2) +0.016(2/2)  [fit extrapolates beyond data: R*, gamma unreliable]
+
+=== lattice-size dependence, amp=0.2, random perturbation (seeds 1-3) ===
+  N      T    seeds  t=0     t=2     t=5     t=10    t=20     fit: R*     gamma   | slope(5-10) slope(10-20)
+    32    40  3       0.590   0.621   0.941   1.287   1.162         1.308   0.232  | +0.045(3/3) -0.011(0/3)
+    64    40  3       0.597   0.583   0.900   1.228   1.206         1.266   0.237  | +0.051(3/3) -0.010(0/3)
+   128    20  2       0.612   0.563   0.860   1.239   1.184         1.238   0.234  | +0.053(2/2) -0.003(0/2)
+
+=== shell-resolved spectrum collapse (N=32, T=40; normalised per-mode power, bins 1-15) ===
+  amp 0.1 t=0  : max over k-bins of |ln S_a - mean ln S| = 2.85 (worst: lowpeak); median over spectra 1.42; typical bin-to-bin variation of the mean spectrum 0.33
+  amp 0.1 t=10 : max over k-bins of |ln S_a - mean ln S| = 1.30 (worst: midpeak); median over spectra 0.48; typical bin-to-bin variation of the mean spectrum 0.17
+  amp 0.1 t=40 : max over k-bins of |ln S_a - mean ln S| = 0.10 (worst: midpeak); median over spectra 0.08; typical bin-to-bin variation of the mean spectrum 0.12
+  amp 0.2 t=0  : max over k-bins of |ln S_a - mean ln S| = 1.62 (worst: lowpeak); median over spectra 0.84; typical bin-to-bin variation of the mean spectrum 0.17
+  amp 0.2 t=10 : max over k-bins of |ln S_a - mean ln S| = 0.15 (worst: highpeak); median over spectra 0.13; typical bin-to-bin variation of the mean spectrum 0.20
+  amp 0.2 t=40 : max over k-bins of |ln S_a - mean ln S| = 0.15 (worst: random (white)); median over spectra 0.12; typical bin-to-bin variation of the mean spectrum 0.08
+
+##### comparison of backgrounds (N=32, T=40, mean over seeds; Rpm at t=0 / 10 / 40 and final flatness) #####
+--- amp 0.05 ---
+  initial spectrum    |                white                |                smooth               |              lowstrong              
+  random (white)    |  0.27  0.37  0.58 flat  0.48 n=3   |                  -                  |                  -                  
+--- amp 0.1 ---
+  initial spectrum    |                white                |                smooth               |              lowstrong              
+  lowpeak           |  1.69  0.92  1.10 flat  0.11 n=3   | 17386.80 68.02 12.25 flat  3.34 n=3   |  2.16  1.36  1.17 flat  0.14 n=3   
+  shell-low         |  3.86  1.81  1.09 flat  0.11 n=3   |                  -                  |                  -                  
+  midpeak           |  0.71  1.19  1.09 flat  0.12 n=3   |  3.38  2.27  5.33 flat  2.23 n=3   |  0.87  1.39  1.13 flat  0.12 n=3   
+  flat (plaquette)  |  0.95  0.99  1.10 flat  0.10 n=3   |  1.28  1.70  7.67 flat  1.82 n=3   |  1.02  1.21  1.21 flat  0.16 n=3   
+  random (white)    |  0.36  0.64  1.06 flat  0.10 n=3   |  0.28  0.35  1.98 flat  0.69 n=3   |  0.37  0.77  1.16 flat  0.14 n=3   
+  shell-high        |  0.28  0.55  1.03 flat  0.13 n=3   |                  -                  |                  -                  
+  highpeak          |  0.28  0.49  1.10 flat  0.10 n=3   |  0.00  0.00  0.03 flat  2.91 n=3   |  0.28  0.61  1.16 flat  0.14 n=3   
+--- amp 0.2 ---
+  initial spectrum    |                white                |                smooth               |              lowstrong              
+  lowpeak           |  0.99  1.18  1.10 flat  0.11 n=3   | 1890.25  7.88  2.82 flat  1.00 n=3   |  1.58  1.32  1.10 flat  0.12 n=3   
+  shell-low         |  1.87  1.30  1.10 flat  0.11 n=3   |                  -                  |                  -                  
+  midpeak           |  0.77  1.31  1.10 flat  0.11 n=3   |  3.31  3.70  2.79 flat  0.98 n=3   |  0.91  1.37  1.11 flat  0.10 n=3   
+  flat (plaquette)  |  0.88  1.19  1.12 flat  0.12 n=3   |  1.86  3.29  2.80 flat  0.98 n=3   |  1.06  1.31  1.13 flat  0.12 n=3   
+  random (white)    |  0.57  1.20  1.10 flat  0.10 n=3   |  0.38  0.92  2.72 flat  0.97 n=3   |  0.59  1.29  1.08 flat  0.11 n=3   
+  shell-high        |  0.53  1.20  1.08 flat  0.08 n=3   |                  -                  |                  -                  
+  highpeak          |  0.54  1.15  1.08 flat  0.09 n=3   |  0.00  0.05  1.42 flat  0.35 n=3   |  0.54  1.25  1.11 flat  0.13 n=3   
+--- amp 0.3 ---
+  initial spectrum    |                white                |                smooth               |              lowstrong              
+  random (white)    |  0.75  1.22  1.01 flat  0.08 n=3   |                  -                  |                  -                  
+--- amp 0.5 ---
+  initial spectrum    |                white                |                smooth               |              lowstrong              
+  lowpeak           |                  -                  | 108.21  1.38  1.01 flat  0.10 n=3   |                  -                  
+  random (white)    |                  -                  |  0.73  1.42  1.03 flat  0.09 n=3   |                  -                  
+  highpeak          |                  -                  |  0.00  1.17  1.07 flat  0.10 n=3   |                  -                  

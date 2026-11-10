@@ -1,0 +1,32 @@
+amp=0.1 perturbation=random seed=42
+  window (3, 7): link_lo=+0.245(R2=0.99)  link_hi=+0.013(R2=0.74)  plaq_lo=+0.094(R2=0.70)  plaq_hi=+0.009(R2=0.09)  plaq_tot=+0.011(R2=0.13)
+  window (5, 9): link_lo=+0.191(R2=1.00)  link_hi=+0.017(R2=0.89)  plaq_lo=+0.038(R2=0.56)  plaq_hi=+0.018(R2=0.42)  plaq_tot=+0.019(R2=0.51)
+  window (7, 10): link_lo=+0.166(R2=1.00)  link_hi=+0.022(R2=0.90)  plaq_lo=+0.114(R2=0.98)  plaq_hi=+0.028(R2=0.54)  plaq_tot=+0.031(R2=0.61)
+amp=0.1 perturbation=random seed=1
+  window (3, 7): link_lo=+0.245(R2=0.99)  link_hi=+0.012(R2=0.68)  plaq_lo=+0.076(R2=0.68)  plaq_hi=+0.008(R2=0.05)  plaq_tot=+0.010(R2=0.09)
+  window (5, 9): link_lo=+0.193(R2=1.00)  link_hi=+0.015(R2=0.83)  plaq_lo=+0.049(R2=0.77)  plaq_hi=+0.017(R2=0.35)  plaq_tot=+0.018(R2=0.43)
+  window (7, 10): link_lo=+0.166(R2=1.00)  link_hi=+0.021(R2=0.89)  plaq_lo=+0.112(R2=0.96)  plaq_hi=+0.026(R2=0.52)  plaq_tot=+0.027(R2=0.58)
+amp=0.1 perturbation=random seed=2
+  window (3, 7): link_lo=+0.245(R2=0.99)  link_hi=+0.011(R2=0.66)  plaq_lo=+0.088(R2=0.66)  plaq_hi=+0.008(R2=0.06)  plaq_tot=+0.009(R2=0.09)
+  window (5, 9): link_lo=+0.190(R2=1.00)  link_hi=+0.016(R2=0.86)  plaq_lo=+0.051(R2=0.89)  plaq_hi=+0.016(R2=0.36)  plaq_tot=+0.018(R2=0.47)
+  window (7, 10): link_lo=+0.163(R2=1.00)  link_hi=+0.022(R2=0.91)  plaq_lo=+0.091(R2=0.97)  plaq_hi=+0.027(R2=0.55)  plaq_tot=+0.030(R2=0.61)
+amp=0.1 perturbation=random seed=3
+  window (3, 7): link_lo=+0.253(R2=0.99)  link_hi=+0.011(R2=0.65)  plaq_lo=+0.111(R2=0.82)  plaq_hi=+0.007(R2=0.05)  plaq_tot=+0.010(R2=0.10)
+  window (5, 9): link_lo=+0.198(R2=1.00)  link_hi=+0.016(R2=0.85)  plaq_lo=+0.048(R2=0.78)  plaq_hi=+0.019(R2=0.46)  plaq_tot=+0.021(R2=0.57)
+  window (7, 10): link_lo=+0.171(R2=1.00)  link_hi=+0.022(R2=0.91)  plaq_lo=+0.104(R2=0.99)  plaq_hi=+0.030(R2=0.66)  plaq_tot=+0.032(R2=0.72)
+amp=0.2 perturbation=random seed=42
+  window (3, 7): link_lo=+0.312(R2=0.99)  link_hi=+0.083(R2=0.99)  plaq_lo=+0.195(R2=0.99)  plaq_hi=+0.082(R2=0.90)  plaq_tot=+0.092(R2=0.92)
+  window (5, 9): link_lo=+0.227(R2=1.00)  link_hi=+0.127(R2=0.99)  plaq_lo=+0.225(R2=0.99)  plaq_hi=+0.139(R2=0.99)  plaq_tot=+0.150(R2=0.99)
+  window (7, 10): link_lo=+0.194(R2=1.00)  link_hi=+0.159(R2=1.00)  plaq_lo=+0.216(R2=0.98)  plaq_hi=+0.170(R2=0.99)  plaq_tot=+0.180(R2=1.00)
+amp=0.2 perturbation=random seed=1
+  window (3, 7): link_lo=+0.310(R2=0.99)  link_hi=+0.080(R2=0.99)  plaq_lo=+0.182(R2=0.99)  plaq_hi=+0.079(R2=0.88)  plaq_tot=+0.089(R2=0.91)
+  window (5, 9): link_lo=+0.229(R2=1.00)  link_hi=+0.118(R2=0.99)  plaq_lo=+0.204(R2=0.99)  plaq_hi=+0.129(R2=0.99)  plaq_tot=+0.139(R2=0.99)
+  window (7, 10): link_lo=+0.202(R2=1.00)  link_hi=+0.159(R2=1.00)  plaq_lo=+0.196(R2=0.98)  plaq_hi=+0.155(R2=1.00)  plaq_tot=+0.164(R2=1.00)
+amp=0.2 perturbation=random seed=2
+  window (3, 7): link_lo=+0.324(R2=0.99)  link_hi=+0.084(R2=0.98)  plaq_lo=+0.221(R2=0.99)  plaq_hi=+0.084(R2=0.90)  plaq_tot=+0.094(R2=0.93)
+  window (5, 9): link_lo=+0.227(R2=0.99)  link_hi=+0.135(R2=0.99)  plaq_lo=+0.201(R2=1.00)  plaq_hi=+0.143(R2=0.99)  plaq_tot=+0.155(R2=0.99)
+  window (7, 10): link_lo=+0.185(R2=1.00)  link_hi=+0.175(R2=1.00)  plaq_lo=+0.188(R2=0.99)  plaq_hi=+0.167(R2=1.00)  plaq_tot=+0.177(R2=1.00)
+amp=0.2 perturbation=random seed=3
+  window (3, 7): link_lo=+0.316(R2=0.99)  link_hi=+0.079(R2=0.98)  plaq_lo=+0.220(R2=1.00)  plaq_hi=+0.079(R2=0.89)  plaq_tot=+0.092(R2=0.92)
+  window (5, 9): link_lo=+0.220(R2=0.99)  link_hi=+0.119(R2=0.99)  plaq_lo=+0.173(R2=0.99)  plaq_hi=+0.136(R2=0.98)  plaq_tot=+0.145(R2=0.99)
+  window (7, 10): link_lo=+0.178(R2=1.00)  link_hi=+0.154(R2=1.00)  plaq_lo=+0.176(R2=1.00)  plaq_hi=+0.164(R2=1.00)  plaq_tot=+0.172(R2=1.00)

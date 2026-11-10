@@ -1,0 +1,9 @@
+seed=3 perturbation=shell-low
+initial plaq distance = 1.1624e-08, plaq_lo/plaq_hi at t=0: 1.417e-07/3.276e-07; at t=T_end: 2.779e-07/9.811e-07
+amp=0.2: exponents from log-linear fits, fit start t0 = 1 / 3 / 6
+  link_hi   +0.1736 (R2=0.99)   +0.1864 (R2=1.00)   +0.1908 (R2=1.00)
+  link_lo   +0.1151 (R2=0.93)   +0.1428 (R2=1.00)   +0.1578 (R2=1.00)
+  plaq_tot  +0.1519 (R2=0.99)   +0.1544 (R2=1.00)   +0.1671 (R2=1.00)
+  plaq_hi   +0.1487 (R2=0.99)   +0.1538 (R2=1.00)   +0.1637 (R2=1.00)
+  plaq_lo   +0.1323 (R2=0.86)   +0.1207 (R2=0.86)   +0.1668 (R2=0.98)
+  energy drift [%]: max over trajectory = 0.01088, at t=T_end = 0.00514

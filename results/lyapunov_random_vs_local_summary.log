@@ -1,0 +1,46 @@
+
+=== amp=0.1 perturbation=local: plaquette low-k minus high-k exponent (positive = low-k grows faster); seeds [1, 2, 3, 42] ===
+  window (3, 7): s1:+0.16/+0.01  s2:+0.14/+0.01  s3:+0.09/+0.01  s42:+0.06/+0.01
+     diff mean=+0.105 sd=0.042 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.09/+0.03  s2:+0.05/+0.02  s3:+0.04/+0.02  s42:+0.10/+0.03
+     diff mean=+0.049 sd=0.026 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.13/+0.05  s2:+0.10/+0.02  s3:+0.11/+0.04  s42:+0.19/+0.04
+     diff mean=+0.096 sd=0.035 seeds with diff>0: 4/4
+  plaq_tot exponent (window 3-7): s1:+0.013  s2:+0.013  s3:+0.010  s42:+0.009
+
+=== amp=0.1 perturbation=random: plaquette low-k minus high-k exponent (positive = low-k grows faster); seeds [1, 2, 3, 42] ===
+  window (3, 7): s1:+0.08/+0.01  s2:+0.09/+0.01  s3:+0.11/+0.01  s42:+0.09/+0.01
+     diff mean=+0.084 sd=0.015 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.05/+0.02  s2:+0.05/+0.02  s3:+0.05/+0.02  s42:+0.04/+0.02
+     diff mean=+0.029 sd=0.007 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.11/+0.03  s2:+0.09/+0.03  s3:+0.10/+0.03  s42:+0.11/+0.03
+     diff mean=+0.078 sd=0.011 seeds with diff>0: 4/4
+  plaq_tot exponent (window 3-7): s1:+0.010  s2:+0.009  s3:+0.010  s42:+0.011
+
+=== amp=0.2 perturbation=local: plaquette low-k minus high-k exponent (positive = low-k grows faster); seeds [1, 2, 3, 42] ===
+  window (3, 7): s1:+0.32/+0.12  s2:+0.24/+0.08  s3:+0.23/+0.10  s42:+0.27/+0.13
+     diff mean=+0.154 sd=0.031 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.18/+0.17  s2:+0.26/+0.11  s3:+0.18/+0.16  s42:+0.21/+0.19
+     diff mean=+0.047 sd=0.070 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.07/+0.20  s2:+0.10/+0.16  s3:+0.18/+0.19  s42:+0.13/+0.19
+     diff mean=-0.066 sd=0.054 seeds with diff>0: 0/4
+  plaq_tot exponent (window 3-7): s1:+0.140  s2:+0.094  s3:+0.114  s42:+0.142
+
+=== amp=0.2 perturbation=random: plaquette low-k minus high-k exponent (positive = low-k grows faster); seeds [1, 2, 3, 42] ===
+  window (3, 7): s1:+0.18/+0.08  s2:+0.22/+0.08  s3:+0.22/+0.08  s42:+0.19/+0.08
+     diff mean=+0.124 sd=0.018 seeds with diff>0: 4/4
+  window (5, 9): s1:+0.20/+0.13  s2:+0.20/+0.14  s3:+0.17/+0.14  s42:+0.22/+0.14
+     diff mean=+0.064 sd=0.021 seeds with diff>0: 4/4
+  window (7, 10): s1:+0.20/+0.16  s2:+0.19/+0.17  s3:+0.18/+0.16  s42:+0.22/+0.17
+     diff mean=+0.030 sd=0.016 seeds with diff>0: 4/4
+  plaq_tot exponent (window 3-7): s1:+0.089  s2:+0.094  s3:+0.092  s42:+0.092
+
+=== amp=0.1: paired comparison, seeds [1, 2, 3, 42] (diff_random - diff_local; <0: random has weaker low-k lead) ===
+  window (3, 7): local +0.105  random +0.084  paired diff -0.021 (sd 0.053)
+  window (5, 9): local +0.049  random +0.029  paired diff -0.020 (sd 0.030)
+  window (7, 10): local +0.096  random +0.078  paired diff -0.018 (sd 0.031)
+
+=== amp=0.2: paired comparison, seeds [1, 2, 3, 42] (diff_random - diff_local; <0: random has weaker low-k lead) ===
+  window (3, 7): local +0.154  random +0.124  paired diff -0.031 (sd 0.045)
+  window (5, 9): local +0.047  random +0.064  paired diff +0.017 (sd 0.076)
+  window (7, 10): local -0.066  random +0.030  paired diff +0.096 (sd 0.067)
